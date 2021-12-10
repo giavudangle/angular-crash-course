@@ -1,0 +1,21 @@
+.header__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header__line {
+    align-self: center;
+    display: flex;
+    text-align: center;
+    width: 20rem;
+    height: 0.1rem;
+    background-color: red;
+    position: relative;
+    left: -2.5rem;
+}
