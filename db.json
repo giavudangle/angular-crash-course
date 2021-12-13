@@ -3,13 +3,13 @@
     {
       "name": "Gia Vu Dang Le",
       "day": "asdasd",
-      "reminder": false,
+      "reminder": true,
       "id": 1
     },
     {
       "name": "asdads",
       "day": "wqeqweqwe",
-      "reminder": false,
+      "reminder": true,
       "id": 3
     },
     {
