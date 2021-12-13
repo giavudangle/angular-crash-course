@@ -1,7 +1,10 @@
+import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ITask } from '../../../mock/task/task.interface';
 import { TASKS } from '../../../mock/task/task.mock';
 import { TaskService } from '../../services/task.service';
+
+
 
 @Component({
   selector: 'app-tasks',
@@ -23,9 +26,19 @@ export class TasksComponent implements OnInit {
 
   deleteTask(task : ITask){
     this.taskService
-      .deleteTasks(task)
+      .deleteTask(task)
       .subscribe(() => 
         (this.tasks = this.tasks.filter(t => t.id !== task.id)))
+  }
+  
+  toggleReminder(task : ITask){
+    task.reminder=!task.reminder
+    this.taskService.updateTaskReminder(task).subscribe()
+  }
+
+  addTask(task :ITask){
+    console.log(task)
+    this.taskService.addTask(task).subscribe(t => this.tasks.push(t))
   }
 
 }
